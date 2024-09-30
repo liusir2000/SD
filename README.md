@@ -7,4 +7,4 @@ Code and sample data related to reversing sunshine duration (SD) and solar radia
 (4) images.zip is the sample data of video images.
 
 
-Need packages: transformers, aquacropeto, PIL, Torch 
+Need packages: transformers, PIL, Torch, aquacropeto
