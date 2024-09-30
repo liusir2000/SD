@@ -23,10 +23,12 @@ def computeRs(n,date):
     return Rs
     
 
-filename = 'xjh_daily_SD_Is_it_sunny.csv'
-df =  pd.read_csv(filename)
+SDDailyFilename = 'xjh_daily_SD_Is_it_sunny.csv'
+SRDailyFilename = 'xjh_daily_SR_Is_it_sunny.csv'
 
+df =  pd.read_csv(SDDailyFilename)
 
+#set Latitude
 Local_Lat = 31.2
 
 
@@ -40,4 +42,4 @@ for i in range(len(df)):
     rss.append(rs)
 
 df['SR']=rss
-df.to_csv('xjh_daily_SR_Is_it_sunny.csv')
+df.to_csv(SRDailyFilename)
