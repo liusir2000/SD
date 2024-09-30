@@ -38,7 +38,10 @@ def getWeather(filename,text):
         return 'error'
 
 
-params = [[r'H:\xjh_paper1-12','xjh_Is_it_sunny_result.csv']]
+yourImagesDir = r'.\xjhImages'
+yourOutputfile = 'xjh_Is_it_sunny_result.csv'
+
+params = [[yourImagesDir,yourOutputfile]]
 for param in params:
     sourcedir = param[0]
     resultfile = param[1]
