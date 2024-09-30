@@ -9,12 +9,14 @@ import pandas as pd
 import datetime
 import numpy as np
 
-filename = 'xjh_Is_it_sunny_result.csv'
+weatherFilename = 'xjh_Is_it_sunny_result.csv'
+SDHourlyOutputfile = 'xjh_hourly_SD_Is_it_sunny.csv'
+SDDailyOutputfile = 'xjh_daily_SD_Is_it_sunny.csv'
 
 
 names = ['picname','picnametime','weatherType1']
 
-dfResult=pd.read_csv(filename,names=names,encoding='gbk')
+dfResult=pd.read_csv(weatherFilename,names=names)
 
 
 dfResult['months'] = dfResult.picname.apply(lambda x:x[4:6])
@@ -44,7 +46,7 @@ newdf.days = days
 newdf['months'] = newdf.days.apply(lambda x:x[4:6])
 newdf['hours'] = newdf.days.apply(lambda x:x[8:10])
 newdf['d'] = newdf.days.apply(lambda x:x[6:8]) 
-newdf.to_csv('xjh_hourly_SD_Is_it_sunny.csv')
+newdf.to_csv(SDHourlyOutputfile)
 newdf111=newdf[(newdf.hours>'05')&(newdf.hours<='18')]
 
 fromdt = datetime.datetime(2023,1,1)
@@ -72,7 +74,7 @@ while fromdt<todt:
 df=pd.DataFrame([],columns=['Date','SD'])   
 df['Date']=dates 
 df['SD']=daypic
-df.to_csv('xjh_daily_SD_Is_it_sunny.csv')
+df.to_csv(SDDailyOutputfile)
 
 
 
