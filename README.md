@@ -8,4 +8,4 @@ Codes and sample data related to retrieve sunshine duration (SD) and solar radia
 
 
 
-Need packages: transformers, PIL, Torch, aquacropeto
+Need packages: transformers (4.30.2), Pillow (9.5.0), torch (1.13.1+cu117), aquacropeto (0.1.1)
