@@ -9,3 +9,7 @@ Codes and sample data related to retrieve sunshine duration (SD) and solar radia
 
 
 Need packages: transformers (4.30.2), Pillow (9.5.0), torch (1.13.1+cu117), aquacropeto (0.1.1)
+
+Here are the codes and data related to 
+"Liu D, Tan J, Wang Y, et al. Innovative Sunshine Duration Observations with AI: Bridging the Gap in Climatological Data. Bulletin of the American Meteorological Society, 2025, 106(9): E1859-E1872." 
+If used, please cite this article.
